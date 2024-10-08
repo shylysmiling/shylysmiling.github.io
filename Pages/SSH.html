@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- nothing here -->
+  </head>
+  <body>
+    <h2>SSH</h2>
+    
+    <section>
+      <h3>Avoid known hosts</h3>
+      <p>Set "known hosts" path to /dev/null:</p>
+      <p><code>ssh -o 'UserKnownHostsFile /dev/null'</code></p>
+      <p>Also disable key approving ask:</p>
+      <p><code>ssh -o 'StrictHostKeyChecking no' -o 'UserKnownHostsFile /dev/null'</code></p>
+    </section>
+  </body>
+</html>
