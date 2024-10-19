@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  
+  <body>
+    <h2>Commands</h2>
+    
+    <section id="wget-mirror-site">
+      <h3>Mirror site using <code>wget</code></h3>
+
+      <p>Download entire <code>https://shylysmiling.github.io/</code> site:</p>
+      <p>
+        <code>wget --recursive --timestamping --level=inf --convert-links --page-requisites --no-parent --force-directories https://shylysmiling.github.io/</code>
+      </p>
+
+      <p>Notable options:</p>
+      <ul>
+        <li><code>--convert-links</code> enable converting remote links to local relative links in HTML documents after downloading finished.</li>
+        <li><code>--no-parent</code> forbids to look up parent directories.</li>
+        <li><code>--force-directories</code> enable creating folder hierarchy instead of downloading all resources to one flat folder.</li>
+      </ul>
+      
+      <p>Search for all options at <a href="https://man7.org/linux/man-pages/man1/wget.1.html">man 'wget(1)'</a>.</p>
+    </section>
+    
+  </body>
+</html>
