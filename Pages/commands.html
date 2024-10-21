@@ -22,6 +22,40 @@
       
       <p>Search for all options at <a href="https://man7.org/linux/man-pages/man1/wget.1.html">man 'wget(1)'</a>.</p>
     </section>
+
+    <section id="backup-home-to-zip">
+      <h3>Create backup of personal data with <code>zip</code></h3>
+
+      <p>List paths you want to include to archive in <code>includes.txt</code> file.</p>
+      <p>The asterisk (<code>*</code>) is important for selecting all directory content.</p>
+      <p>
+        <code>
+        /home/kelly/Documents/*
+        /home/kelly/Pictures/*
+        /home/kelly/Projects/*
+        /home/kelly/.profile
+        </code>
+      </p>
+
+      <p>List paths that must not be included in <code>excludes.txt</code> file.</p>
+      <p>
+        <code>
+        /home/kelly/Projects/*.o
+        /home/kelly/Projects/*.a
+        </code>
+      </p>
+
+      <p>Run the archiver.</p>
+      <p><code>zip -u -y -9 -r /home/kelly/backup.zip /home/kelly -i@includes.txt -x@excludes.txt</code></p>
+
+      <p>Notable options:</p>
+      <ul>
+        <li><code>-y</code> force storing symlinks instead of dereferencing it.</li>
+        <li><code>-r</code> enable recursive directories traversing.</li>
+      </ul>
+
+      <p>Search for all options at <a href="https://linux.die.net/man/1/zip">man 'zip(1)'</a>.</p>
+    </section>
     
   </body>
 </html>
