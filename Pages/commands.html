@@ -56,6 +56,23 @@
 
       <p>Search for all options at <a href="https://linux.die.net/man/1/zip">man 'zip(1)'</a>.</p>
     </section>
+
+    <section id="gvfsd-mount-archive">
+      <h3>Mount archive with GVFS</h3>
+
+      <p>Ensure that GVFS is installed.</p>
+
+      <p>Locate the <code>gvfsd-archive</code> executable inside <code>/usr</code>.</p>
+      <p>
+        <code>find /usr -name gvfsd-archive</code>
+      </p>
+      <p>It's found at <code>/usr/lib/gvfsd-archive</code> in my distribution.</p>
+      
+      <p>Mount the <code>/home/kelly/backup.zip</code> archive using previously founded program.</p>
+      <p>
+        <code>/usr/lib/gvfsd-archive file=/home/kelly/backup.zip</code>
+      </p>
+    </section>
     
   </body>
 </html>
